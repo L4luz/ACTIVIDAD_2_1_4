@@ -4,12 +4,9 @@
 
         <title>ONG</title>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/styles.css">
     <body>
         <div class="container-fluid text-center">
@@ -37,9 +34,77 @@
             <h2>CONTÁCTENOS</h2>
            </div>
           </div>
+
+
+          <div class="row">
+              <div class="col-sm-4 div-formulario">
+                <div class="form-group">
+                  <label >NOMBRE :</label>
+                  <input type="text" name="txt_nombre" id="txt_nombre" class="form-control">
+                  <small id="lbl_nombre" class="form-text text-muted">Nombre Completo Ej: Cristiano Ronaldo</small>
+                  <small id="lbl_nombre" class="form-text text-danger">Debe Ingresar un Nombre</small>
+                </div>
+                <div class="form-group">
+                  <label >Email :</label>
+                  <input type="text" name="txt_email" id="txt_email" class="form-control">
+                  <small id="lbl_email" class="form-text text-muted">Email con @ </small>
+                  <small id="lbl_email" class="form-text text-danger">Debe Ingresar un Email</small>
+                </div>
+              </div>
+              <div class="col-sm-4 div-formulario">
+                <div class="form-group">
+                  <label class="radio-inline"><input type="radio" name="optradio">RUT</label>
+                  <label class="radio-inline"><input type="radio" name="optradio">PASAPORTE</label>
+                  <small id="lbl_numero" class="form-text text-muted">Seleccione si usara RUT o Pasaporte</small>
+                  <small id="lbl_numero" class="form-text text-danger">Debe Seleccionar una Alternativa</small>
+               
+                </div>
+                  <div class="form-group">
+                  <label >INDIQUE :</label>
+                  <input type="text" name="txt_identifica" id="txt_identifica" class="form-control">
+                  <small id="lbl_identifica" class="form-text text-muted">RUT Ej:  00111222-3 / PASAPORTE Ej: 0300004</small>
+                  <small id="lbl_identifica" class="form-text text-danger">Debe Identificarse</small>
+                </div>
+              </div>
+              <div class="col-sm-4 div-formulario">
+                <div class="form-group">
+                <label >NÚMERO TELÉFONO :</label>
+                  <input type="number" name="txt_numero" id="txt_numero" class="form-control">
+                  <small id="lbl_numero" class="form-text text-muted">Ingrese +569 Antes de su Número Telefónico</small>
+                  <small id="lbl_numero" class="form-text text-danger">Debe Ingresa un Número Telefónico</small>
+                </div>
+                <div class="form-group">
+                  <label >CIUDAD RESIDENCIA :</label>
+                  <input type="text" name="txt_ciudad" id="txt_ciudad" class="form-control">
+                  <small id="lbl_ciudad" class="form-text text-muted">Nombre de la Ciudad Ej: Santiago</small>
+                  <small id="lbl_ciudad" class="form-text text-danger">Debe Ingresar el Nombre de La Ciudad</small>
+               
+                </div>
+              </div>
+          </div>
+          <div class="row">
+
+            
+            <div class="col-sm-6 div-formulario">
+            <div class="form-group">
+            <label >COMENTARIO :</label>
+            <textarea name="txtaComentario" id="txtaComentario" cols="70" rows="5"></textarea>
+            <small id="lbl_nombre" class="form-text text-muted">Señale lo que le gustaria Participar en la ONG</small>
+            <small id="lbl_nombre" class="form-text text-danger">Debe ingresar un Comentario</small>
+          </div>
+        </div>
+        <div class="col-sm-6 div-formulario">
+          <div class="form-group">
+            <button type="reset" class="btn form-text btn-info">Limpiar</button>
+            <button type="button" class="btn form-text  btn-info">Enviar</button>
           
         </div>
+      </div>
 
+
+        </div>
+          </div>
+                   
 
 
           <footer >
