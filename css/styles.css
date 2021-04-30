@@ -6,6 +6,7 @@ color: white;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    
 }
+
 footer{
     background-color: #3095a7;
     color: white;
@@ -22,22 +23,31 @@ footer{
     background:#3095a7!important
     
 }
-.nav-pills a{
+.nav-pills a {
     color: #3095a7;
     font-size: larger;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
+}
 
-#demo{
+#demo .carousel{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top:10px;
     margin-bottom: 100px;
+    background-color: #3095a7;
     border: solid #3095a7;
 }
 #demo img{
     margin-top: 1rem;
     margin-bottom: 1rem;
+    width: 100%;
+    border: solid #3095a7;
 }
+#demo{
+    color: #3095a7;
+    max-width: 60%;
+    margin: auto;
+}
+
     
 .card  .btn{
     background-color: #3095a7;

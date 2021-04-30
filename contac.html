@@ -13,7 +13,7 @@
 
           <div class="row  ">
             <div class="col-12 jumbotron">
-                <h1>ADOPTA UN PELUDO.</h1>
+                <h1>ADOPTA UN PELUDO</h1>
             </div>
           </div>
 
@@ -22,7 +22,7 @@
             <nav class="nav nav-pills flex-column flex-sm-row">
               <a class="flex-sm-fill text-sm-center nav-link " href="index.html">INICIO</a>
               <a class="flex-sm-fill text-sm-center nav-link" href="quiSom.html">QUIÉNES SOMOS</a>
-              <a class="flex-sm-fill text-sm-center nav-link" href="mi_vi.html">MISION/VISION</a>
+              <a class="flex-sm-fill text-sm-center nav-link" href="mi_vi.html">MISIÓN/VISIÓN</a>
               <a class="flex-sm-fill text-sm-center nav-link" href ="comAdo.html">CÓMO ADOPTAR</a>
               <a class="flex-sm-fill text-sm-center nav-link active" href ="contac.html">CONTÁCTENOS</a>
             </nav>
@@ -41,28 +41,28 @@
                 <div class="form-group">
                   <label >NOMBRE :</label>
                   <input type="text" name="txt_nombre" id="txt_nombre" class="form-control">
-                  <small id="lbl_nombre" class="form-text text-muted">Nombre Completo Ej: Cristiano Ronaldo</small>
+                  <small id="" class="form-text text-muted">Nombre Completo Ej: Cristiano Ronaldo</small>
                   <small id="lbl_nombre" class="form-text text-danger">Debe Ingresar un Nombre</small>
                 </div>
                 <div class="form-group">
                   <label >Email :</label>
                   <input type="text" name="txt_email" id="txt_email" class="form-control">
-                  <small id="lbl_email" class="form-text text-muted">Email con @ </small>
+                  <small id="" class="form-text text-muted">Email con @ </small>
                   <small id="lbl_email" class="form-text text-danger">Debe Ingresar un Email</small>
                 </div>
               </div>
               <div class="col-sm-4 div-formulario">
                 <div class="form-group">
-                  <label class="radio-inline"><input type="radio" name="optradio">RUT</label>
-                  <label class="radio-inline"><input type="radio" name="optradio">PASAPORTE</label>
-                  <small id="lbl_numero" class="form-text text-muted">Seleccione si usara RUT o Pasaporte</small>
-                  <small id="lbl_numero" class="form-text text-danger">Debe Seleccionar una Alternativa</small>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="rut" >RUT</label>
+                  <label class="radio-inline"><input type="radio" name="optradio" value="pasaporte" >PASAPORTE</label>
+                  <small id="" class="form-text text-muted">Seleccione si usara RUT o Pasaporte</small>
+                  <small id="lbl_rut_pasaporte" class="form-text text-danger">Debe Seleccionar una Alternativa</small>
                
                 </div>
                   <div class="form-group">
                   <label >INDIQUE :</label>
                   <input type="text" name="txt_identifica" id="txt_identifica" class="form-control">
-                  <small id="lbl_identifica" class="form-text text-muted">RUT Ej:  00111222-3 / PASAPORTE Ej: 0300004</small>
+                  <small id="" class="form-text text-muted">RUT Ej:  00111222-3 / PASAPORTE Ej: 0300004</small>
                   <small id="lbl_identifica" class="form-text text-danger">Debe Identificarse</small>
                 </div>
               </div>
@@ -70,13 +70,12 @@
                 <div class="form-group">
                 <label >NÚMERO TELÉFONO :</label>
                   <input type="number" name="txt_numero" id="txt_numero" class="form-control">
-                  <small id="lbl_numero" class="form-text text-muted">Ingrese +569 Antes de su Número Telefónico</small>
-                  <small id="lbl_numero" class="form-text text-danger">Debe Ingresa un Número Telefónico</small>
+                  <small id="" class="form-text text-muted">Ingrese +569 Antes de su Número Telefónico</small>
                 </div>
                 <div class="form-group">
                   <label >CIUDAD RESIDENCIA :</label>
                   <input type="text" name="txt_ciudad" id="txt_ciudad" class="form-control">
-                  <small id="lbl_ciudad" class="form-text text-muted">Nombre de la Ciudad Ej: Santiago</small>
+                  <small id="" class="form-text text-muted">Nombre de la Ciudad Ej: Santiago</small>
                   <small id="lbl_ciudad" class="form-text text-danger">Debe Ingresar el Nombre de La Ciudad</small>
                
                 </div>
@@ -88,15 +87,15 @@
             <div class="col-sm-6 div-formulario">
             <div class="form-group">
             <label >COMENTARIO :</label>
-            <textarea name="txtaComentario" id="txtaComentario" cols="70" rows="5"></textarea>
-            <small id="lbl_nombre" class="form-text text-muted">Señale lo que le gustaria Participar en la ONG</small>
-            <small id="lbl_nombre" class="form-text text-danger">Debe ingresar un Comentario</small>
+            <textarea name="txtaComentario" id="txtaComentario" cols="45" rows="5"></textarea>
+            <small id="" class="form-text text-muted">Señale lo que le gustaria Participar en la ONG</small>
+            <small id="lbl_comentario" class="form-text text-danger">Debe ingresar un Comentario</small>
           </div>
         </div>
         <div class="col-sm-6 div-formulario">
           <div class="form-group">
             <button type="reset" class="btn form-text btn-info">Limpiar</button>
-            <button type="button" class="btn form-text  btn-info">Enviar</button>
+            <button type="button" onclick="fn_mostrarEtiquetas();" class="btn form-text  btn-info">Enviar</button>
           
         </div>
       </div>
@@ -112,4 +111,53 @@
           </footer>
 
     </body>
+    <script>
+
+      fn_mostrarEtiquetas();
+      fn_ocultarEtiquetas();
+      function fn_ocultarEtiquetas(){
+          document.getElementById("lbl_nombre").style.visibility = "hidden";
+          document.getElementById("lbl_email").style.visibility = "hidden";
+          document.getElementById("lbl_rut_pasaporte").style.visibility = "hidden";
+          document.getElementById("lbl_identifica").style.visibility = "hidden";
+          document.getElementById("lbl_ciudad").style.visibility = "hidden";
+          document.getElementById("lbl_comentario").style.visibility = "hidden";
+      }
+      function fn_mostrarEtiquetas(){
+        
+        var nombre = document.getElementById('txt_nombre').value;
+        var email = document.getElementById('txt_email').value;
+        var indique = document.getElementById('txt_identifica').value;
+        var ciudad = document.getElementById('txt_ciudad').value;
+        var comentario = document.getElementById('txtaComentario').value;
+        var rut_pasa = document.querySelector('input[name="optradio"]:checked')
+        
+        if (nombre | email | indique | ciudad | comentario == "")
+        {
+          document.getElementById("lbl_nombre").style.visibility = "visible";
+          document.getElementById("lbl_email").style.visibility = "visible";
+          document.getElementById("lbl_identifica").style.visibility = "visible";
+          document.getElementById("lbl_ciudad").style.visibility = "visible";
+          document.getElementById("lbl_comentario").style.visibility = "visible";
+        }
+        else{
+          document.getElementById("lbl_nombre").style.visibility = "hidden";
+          document.getElementById("lbl_email").style.visibility = "hidden";
+          document.getElementById("lbl_identifica").style.visibility = "hidden";
+          document.getElementById("lbl_ciudad").style.visibility = "hidden";
+          document.getElementById("lbl_comentario").style.visibility = "hidden";
+          
+        }
+        
+        if(document.querySelector('input[name="optradio"]:checked')){
+          
+          document.getElementById("lbl_rut_pasaporte").style.visibility = "hidden";
+          
+        }else{
+          
+          document.getElementById("lbl_rut_pasaporte").style.visibility = "visible";
+        }
+
+      }
+    </script>
 </html>
