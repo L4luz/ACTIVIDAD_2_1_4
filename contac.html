@@ -53,8 +53,8 @@
               </div>
               <div class="col-sm-4 div-formulario">
                 <div class="form-group">
-                  <label class="radio-inline"><input type="radio" name="optradio" value="rut" >RUT</label>
-                  <label class="radio-inline"><input type="radio" name="optradio" value="pasaporte" >PASAPORTE</label>
+                  <label class="radio-inline" ><input id="radiorut1" class="" type="radio" name="optradio" value="rut" >RUT</label>
+                  <label class="radio-inline"><input id="radiorut2" class="" type="radio" name="optradio" value="pasaporte" >PASAPORTE</label>
                   <small id="" class="form-text text-muted">Seleccione si usara RUT o Pasaporte</small>
                   <small id="lbl_rut_pasaporte" class="form-text text-danger">Debe Seleccionar una Alternativa</small>
                
@@ -87,7 +87,7 @@
             <div class="col-sm-6 div-formulario">
             <div class="form-group">
             <label >COMENTARIO :</label>
-            <textarea name="txtaComentario" id="txtaComentario" cols="45" rows="5"></textarea>
+            <textarea class="form-control" name="txtaComentario" id="txtaComentario" cols="45" rows="5"></textarea>
             <small id="" class="form-text text-muted">Señale lo que le gustaria Participar en la ONG</small>
             <small id="lbl_comentario" class="form-text text-danger">Debe ingresar un Comentario</small>
           </div>
@@ -113,8 +113,9 @@
     </body>
     <script>
 
-      fn_mostrarEtiquetas();
+      
       fn_ocultarEtiquetas();
+
       function fn_ocultarEtiquetas(){
           document.getElementById("lbl_nombre").style.visibility = "hidden";
           document.getElementById("lbl_email").style.visibility = "hidden";
@@ -122,40 +123,63 @@
           document.getElementById("lbl_identifica").style.visibility = "hidden";
           document.getElementById("lbl_ciudad").style.visibility = "hidden";
           document.getElementById("lbl_comentario").style.visibility = "hidden";
-      }
-      function fn_mostrarEtiquetas(){
-        
-        var nombre = document.getElementById('txt_nombre').value;
-        var email = document.getElementById('txt_email').value;
-        var indique = document.getElementById('txt_identifica').value;
-        var ciudad = document.getElementById('txt_ciudad').value;
-        var comentario = document.getElementById('txtaComentario').value;
-        var rut_pasa = document.querySelector('input[name="optradio"]:checked')
+          
+        }
+
+        function fn_mostrarEtiquetas(){
+          
+          var nombre = document.getElementById('txt_nombre').value;
+          var email = document.getElementById('txt_email').value;
+          var indique = document.getElementById('txt_identifica').value;
+          var ciudad = document.getElementById('txt_ciudad').value;
+          var comentario = document.getElementById('txtaComentario').value;
+          var rut_pasa = document.querySelector('input[name="optradio"]:checked')
         
         if (nombre | email | indique | ciudad | comentario == "")
         {
           document.getElementById("lbl_nombre").style.visibility = "visible";
+          document.getElementById("txt_nombre").classList.add('is-invalid');
           document.getElementById("lbl_email").style.visibility = "visible";
+          document.getElementById("txt_email").classList.add('is-invalid');
           document.getElementById("lbl_identifica").style.visibility = "visible";
+          document.getElementById("txt_identifica").classList.add('is-invalid');
           document.getElementById("lbl_ciudad").style.visibility = "visible";
+          document.getElementById("txt_ciudad").classList.add('is-invalid');
           document.getElementById("lbl_comentario").style.visibility = "visible";
+          document.getElementById("txtaComentario").classList.add('is-invalid');
         }
         else{
           document.getElementById("lbl_nombre").style.visibility = "hidden";
+          document.getElementById("txt_nombre").classList.remove('is-invalid');
+          document.getElementById("txt_nombre").classList.add('is-valid');
+
           document.getElementById("lbl_email").style.visibility = "hidden";
+          document.getElementById("txt_email").classList.remove('is-invalid');
+          document.getElementById("txt_email").classList.add('is-valid');
+
           document.getElementById("lbl_identifica").style.visibility = "hidden";
+          document.getElementById("txt_identifica").classList.remove('is-invalid');
+          document.getElementById("txt_identifica").classList.add('is-valid');
+
           document.getElementById("lbl_ciudad").style.visibility = "hidden";
+          document.getElementById("txt_ciudad").classList.remove('is-invalid');
+          document.getElementById("txt_ciudad").classList.add('is-valid');
+
           document.getElementById("lbl_comentario").style.visibility = "hidden";
+          document.getElementById("txtaComentario").classList.remove('is-invalid');
+          document.getElementById("txtaComentario").classList.add('is-valid');
           
         }
         
         if(document.querySelector('input[name="optradio"]:checked')){
           
           document.getElementById("lbl_rut_pasaporte").style.visibility = "hidden";
-          
+          document.getElementById("radiorut").classList.remove('form-check-input');
+          document.getElementById("radiorut").classList.add('form-check-input');
         }else{
           
           document.getElementById("lbl_rut_pasaporte").style.visibility = "visible";
+          document.getElementById("radiorut").classList.add('form-check-input');
         }
 
       }
