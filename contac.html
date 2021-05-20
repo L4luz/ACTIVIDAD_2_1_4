@@ -8,6 +8,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/formularioContacto.js"></script>
     <body>
         <div class="container-fluid text-center">
 
@@ -41,42 +42,44 @@
                 <div class="form-group">
                   <label >NOMBRE :</label>
                   <input type="text" name="txt_nombre" id="txt_nombre" class="form-control">
-                  <small id="" class="form-text text-muted">Nombre Completo Ej: Cristiano Ronaldo</small>
-                  <small id="lbl_nombre" class="form-text text-danger">Debe Ingresar un Nombre</small>
+                  <small  class="form-text text-muted">Nombre Completo Ej: Cristiano Ronaldo</small>
+                  <small style="visibility: hidden;" id="lbl_nombre" class="form-text text-danger">Debe Ingresar un Nombre</small>
                 </div>
+                
                 <div class="form-group">
                   <label >Email :</label>
-                  <input type="text" name="txt_email" id="txt_email" class="form-control">
-                  <small id="" class="form-text text-muted">Email con @ </small>
-                  <small id="lbl_email" class="form-text text-danger">Debe Ingresar un Email</small>
+                  <input  type="email" name="txt_email" id="txt_email" class="form-control">
+                  <small  class="form-text text-muted">Email con @ </small>
+                  <small style="visibility: hidden;" id="lbl_email" class="form-text text-danger">Debe Ingresar un Email o Validar que echeckedste Correcto</small>
                 </div>
               </div>
               <div class="col-sm-4 div-formulario">
                 <div class="form-group">
-                  <label class="radio-inline" ><input id="radiorut1" class="" type="radio" name="optradio" value="rut" >RUT</label>
+                  <label class="radio-inline" ><input id="radiorut1" class="" type="radio" name="optradio" value="rut" checked>RUT</label>
                   <label class="radio-inline"><input id="radiorut2" class="" type="radio" name="optradio" value="pasaporte" >PASAPORTE</label>
-                  <small id="" class="form-text text-muted">Seleccione si usara RUT o Pasaporte</small>
-                  <small id="lbl_rut_pasaporte" class="form-text text-danger">Debe Seleccionar una Alternativa</small>
+                  <small class="form-text text-muted">Seleccione si usara RUT o Pasaporte</small>
+                  <small style="visibility: hidden;" id="lbl_rut_pasaporte" class="form-text text-danger">Debe Seleccionar una Alternativa</small>
                
                 </div>
                   <div class="form-group">
                   <label >INDIQUE :</label>
                   <input type="text" name="txt_identifica" id="txt_identifica" class="form-control">
-                  <small id="" class="form-text text-muted">RUT Ej:  00111222-3 / PASAPORTE Ej: 0300004</small>
-                  <small id="lbl_identifica" class="form-text text-danger">Debe Identificarse</small>
+                  <small  class="form-text text-muted">RUT Ej:  00111222-3 / PASAPORTE Ej: 0300004</small>
+                  <small style="visibility: hidden;" id="lbl_identifica" class="form-text text-danger">Debe Identificarse O Ingresar los datosCOrrectos</small>
                 </div>
               </div>
               <div class="col-sm-4 div-formulario">
                 <div class="form-group">
                 <label >NÚMERO TELÉFONO :</label>
                   <input type="number" name="txt_numero" id="txt_numero" class="form-control">
-                  <small id="" class="form-text text-muted">Ingrese +569 Antes de su Número Telefónico</small>
+                  <small  class="form-text text-muted">Ingrese +569 Antes de su Número Telefónico</small>
+                  
                 </div>
                 <div class="form-group">
                   <label >CIUDAD RESIDENCIA :</label>
                   <input type="text" name="txt_ciudad" id="txt_ciudad" class="form-control">
-                  <small id="" class="form-text text-muted">Nombre de la Ciudad Ej: Santiago</small>
-                  <small id="lbl_ciudad" class="form-text text-danger">Debe Ingresar el Nombre de La Ciudad</small>
+                  <small  class="form-text text-muted">Nombre de la Ciudad Ej: Santiago</small>
+                  <small style="visibility: hidden;" id="lbl_ciudad" class="form-text text-danger">Debe Ingresar el Nombre de La Ciudad</small>
                
                 </div>
               </div>
@@ -87,101 +90,24 @@
             <div class="col-sm-6 div-formulario">
             <div class="form-group">
             <label >COMENTARIO :</label>
-            <textarea class="form-control" name="txtaComentario" id="txtaComentario" cols="45" rows="5"></textarea>
-            <small id="" class="form-text text-muted">Señale lo que le gustaria Participar en la ONG</small>
-            <small id="lbl_comentario" class="form-text text-danger">Debe ingresar un Comentario</small>
+            <textarea type="text" class="form-control" name="txtaComentario" id="txtaComentario" cols="45" rows="5"></textarea>
+            <small  class="form-text text-muted ">Señale lo que le gustaria Participar en la ONG</small>
+            <small style="visibility: hidden;" id="lbl_comentario" class="form-text text-danger ">Debe ingresar un Comentario con almenos 50  caracteres.</small>
           </div>
         </div>
         <div class="col-sm-6 div-formulario">
           <div class="form-group">
-            <button type="reset" class="btn form-text btn-info">Limpiar</button>
-            <button type="button" onclick="fn_mostrarEtiquetas();" class="btn form-text  btn-info">Enviar</button>
+            <button id="btn_reset" type="button" class="btn form-text btn-info">Limpiar</button>
+            <button id="btn_enviar" type="button" class="btn form-text  btn-info">Enviar</button>
           
         </div>
       </div>
-
-
         </div>
           </div>
-                   
-
-
           <footer >
             NICOLAS IGNACIO LALUZ BURGOS
           </footer>
-
+   
     </body>
-    <script>
-
-      
-      fn_ocultarEtiquetas();
-
-      function fn_ocultarEtiquetas(){
-          document.getElementById("lbl_nombre").style.visibility = "hidden";
-          document.getElementById("lbl_email").style.visibility = "hidden";
-          document.getElementById("lbl_rut_pasaporte").style.visibility = "hidden";
-          document.getElementById("lbl_identifica").style.visibility = "hidden";
-          document.getElementById("lbl_ciudad").style.visibility = "hidden";
-          document.getElementById("lbl_comentario").style.visibility = "hidden";
-          
-        }
-
-        function fn_mostrarEtiquetas(){
-          
-          var nombre = document.getElementById('txt_nombre').value;
-          var email = document.getElementById('txt_email').value;
-          var indique = document.getElementById('txt_identifica').value;
-          var ciudad = document.getElementById('txt_ciudad').value;
-          var comentario = document.getElementById('txtaComentario').value;
-          var rut_pasa = document.querySelector('input[name="optradio"]:checked')
-        
-        if (nombre | email | indique | ciudad | comentario == "")
-        {
-          document.getElementById("lbl_nombre").style.visibility = "visible";
-          document.getElementById("txt_nombre").classList.add('is-invalid');
-          document.getElementById("lbl_email").style.visibility = "visible";
-          document.getElementById("txt_email").classList.add('is-invalid');
-          document.getElementById("lbl_identifica").style.visibility = "visible";
-          document.getElementById("txt_identifica").classList.add('is-invalid');
-          document.getElementById("lbl_ciudad").style.visibility = "visible";
-          document.getElementById("txt_ciudad").classList.add('is-invalid');
-          document.getElementById("lbl_comentario").style.visibility = "visible";
-          document.getElementById("txtaComentario").classList.add('is-invalid');
-        }
-        else{
-          document.getElementById("lbl_nombre").style.visibility = "hidden";
-          document.getElementById("txt_nombre").classList.remove('is-invalid');
-          document.getElementById("txt_nombre").classList.add('is-valid');
-
-          document.getElementById("lbl_email").style.visibility = "hidden";
-          document.getElementById("txt_email").classList.remove('is-invalid');
-          document.getElementById("txt_email").classList.add('is-valid');
-
-          document.getElementById("lbl_identifica").style.visibility = "hidden";
-          document.getElementById("txt_identifica").classList.remove('is-invalid');
-          document.getElementById("txt_identifica").classList.add('is-valid');
-
-          document.getElementById("lbl_ciudad").style.visibility = "hidden";
-          document.getElementById("txt_ciudad").classList.remove('is-invalid');
-          document.getElementById("txt_ciudad").classList.add('is-valid');
-
-          document.getElementById("lbl_comentario").style.visibility = "hidden";
-          document.getElementById("txtaComentario").classList.remove('is-invalid');
-          document.getElementById("txtaComentario").classList.add('is-valid');
-          
-        }
-        
-        if(document.querySelector('input[name="optradio"]:checked')){
-          
-          document.getElementById("lbl_rut_pasaporte").style.visibility = "hidden";
-          document.getElementById("radiorut").classList.remove('form-check-input');
-          document.getElementById("radiorut").classList.add('form-check-input');
-        }else{
-          
-          document.getElementById("lbl_rut_pasaporte").style.visibility = "visible";
-          document.getElementById("radiorut").classList.add('form-check-input');
-        }
-
-      }
-    </script>
+    <script src="js/formularioContacto.js">    </script>
 </html>
