@@ -98,3 +98,12 @@ footer{
     margin-left: 2rem;
     
 }
+.tiempo ,.perros_gatos{
+    margin-top: 5rem;
+    margin-left: 3rem;
+}
+.perros_gatos a{
+    text-decoration: none;
+    color: #3095a7;
+}
+
