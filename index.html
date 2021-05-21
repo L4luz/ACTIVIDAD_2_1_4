@@ -9,7 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        
+        <script src="js/localizacion.js"></script>
         <link rel="stylesheet" href="css/styles.css">
     <body>
         <div class="container-fluid text-center">
@@ -31,11 +31,50 @@
             </nav>
           </div>
           </div>
-      
+          <div class="row">
+            <div class="col-6-md text-center tiempo ">
+                <table id="tiempo" class="table table-dark font-weight-bolder" style="border-radius: 20px;">
+                    <tr>
+                        <td style="border-top:none;" colspan="3">
+                            <span id="tiempo-lugar"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="my-auto">
+                            <img id="tiempo-icono" src="" alt="Ícono del tiempo" title="tiempo" />
+                        </td>
+                        <td class="my-auto">
+                            <span class="display-4" id="tiempo-temperatura"></span>
+                        </td>
+                        <td>
+                            Viento: <span id="tiempo-viento"></span><br/>
+                            Precipitaciones: <span id="tiempo-precipitaciones"></span><br/>
+                            Presión: <span id="tiempo-presion"></span><br/>
+                            Humedad: <span id="tiempo-humedad"></span><br/>
+                        </td>
+                    </tr>
+                </table>
+                <div class="text-center">
+                    <div id="ajax-loader" class="spinner-border spinner-border-md"></div>
+                </div>
+            </div>
+            <div class="col-6-md text-center perros_gatos">
+                <section>
+                    <h2>
+                        <a href="seccion-perros.html" title="Perros">
+                            <img src="imagenes/imagen_perrojpg.jpg" title="Perros" alt="Perros" class="rounded-circle img-thumbnail" width="250"  />
+                        Perros</a>
+                        <a href="seccion-gatos.html" title="Gatos">
+                            <img src="imagenes/imagen_gato.jpg" title="Gatos" alt="Gatos"  class="rounded-circle img-thumbnail" width="250"/>
+                        Gatos</a>
+                    </h2> 
+                </section>
+            </div>
+        </div> 
           <div class="row">
               <div class="col-md-3">
                 <div class="card" style="width: 15rem; ">
-                  <img class="card-img-top" src="imagenes/seccion-perros.jpg" alt="Card image cap">
+                  <img style="height: 10rem;" class="card-img-top" src="imagenes/seccion-perros.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Infórmate</h5>
                     <p class="card-text">¿Sabias que en Chile hay mas de un millon de perros abandonados?</p>
@@ -45,7 +84,7 @@
               </div>
               <div class="col-md-3">
                 <div class="card" style="width: 15rem; ">
-                  <img class="card-img-top" src="imagenes/seccion-gatos.jpeg" alt="Card image cap">
+                  <img style="height: 10rem;" class="card-img-top" src="imagenes/seccion-gatos.jpeg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Adopta</h5>
                     <p class="card-text">Cambia la vida de un animal en situación de calle para siempre.</p>
@@ -55,7 +94,7 @@
               </div>
               <div class="col-md-3">
                 <div class="card" style="width: 15rem; ">
-                  <img class="card-img-top" src="imagenes/seccion-perros.jpg" alt="Card image cap">
+                  <img style="height: 10rem;" class="card-img-top" src="imagenes/imagen_gato2.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Involúcrate</h5>
                     <p class="card-text">Tu igual puedes ser la voz de los que no pueden exigir sus derechos.</p>
@@ -64,8 +103,8 @@
                 </div>
               </div>
               <div class="col-md-3">
-                <div class="card" style="width: 15rem; ">
-                  <img class="card-img-top" src="imagenes/seccion-gatos.jpeg" alt="Card image cap">
+                <div class="card" style="width: 15rem;">
+                  <img style="height: 10rem;" class="card-img-top "src="imagenes/imagen_perro2.jpg" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Colabora</h5>
                     <p class="card-text">Todos podemos ayudar a seguir sumando finales felices.</p>
