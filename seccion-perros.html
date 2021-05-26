@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-
         <title>ONG</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -9,8 +8,10 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/galeria-imagenes.js"></script>
+        <script src="js/seccion-perros.js"></script>
+    </head>
     <body>
         <div class="container-fluid text-center">
 
@@ -34,30 +35,11 @@
       
           <div class="row">
             <div class="titulo_pag">
-            <h2>CÓMO ADOPTAR</h2>
+            <h2>PERROS</h2>
            </div>
           </div>
-          
-          
-          <div class="col-12-md text-center perros_gatos">
-            <section>
-                <h2>
-                    <a href="seccion-perros.html" title="Perros">
-                        <img src="imagenes/imagen_perrojpg.jpg" title="Perros" alt="Perros" class="rounded-circle img-thumbnail" width="250"  />
-                    Perros</a>
-                    <a href="seccion-gatos.html" title="Gatos">
-                        <img src="imagenes/imagen_gato.jpg" title="Gatos" alt="Gatos"  class="rounded-circle img-thumbnail" width="250"/>
-                    Gatos</a>
-                </h2> 
-            </section>
-        </div>
-        <div class="row">
-          <div class="post_titulo ">
-            <h4>COMO ADOPTAR</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eligendi corporis similique dolorum sequi amet ipsa pariatur officia porro totam labore, aut, laudantium unde esse quibusdam nesciunt quaerat quis dolores?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel aliquam perspiciatis odio eaque natus esse eum doloribus rerum aut autem adipisci maxime, fugiat architecto quis veniam vero tenetur, facere eius.</p>
-         </div>
-        </div>
+          <table  id="lista-perros" class="table text-center"></table>
+         
           
         </div>
 
