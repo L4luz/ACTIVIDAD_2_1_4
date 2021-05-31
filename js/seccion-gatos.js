@@ -1,14 +1,19 @@
-
 $(document).ready(function() {
-    
-    var nroTotalImagenes = 6;
-    var nroColumnasPorFila = 2;
-    var selectorTablaHTML = "#lista-gatos"
-    var url = "https://api.thecatapi.com/v1/images/search?limit="+nroTotalImagenes
 
-    generar_galeria_imagenes(selectorTablaHTML, nroTotalImagenes, nroColumnasPorFila, url,"Cambiar Imagen");
+    var url_apiGato = "https://api.thecatapi.com/v1";
+
+    get_breeds(url_apiGato);
+
+    $('#perros').change(function() {
+        if ($(this).val() !==  0) {
+            get_breeds_by_name(url_apiGato, $(this).val())
+        }
+    });
+  
+    
+
 });
 
-function getBtnActionURL() {
+function getBtnActionURLx() {
     return "https://api.thecatapi.com/v1/images/search?limit=1";
 }

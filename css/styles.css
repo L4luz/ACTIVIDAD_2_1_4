@@ -86,16 +86,26 @@ footer{
     border: solid #3095a7;
 }
 
+
 .div-formulario{
-    margin-top: 2rem;
+    width: 40%;
+    margin: auto;
+    text-align: center;
 }
-.col-sm-6 .div-formulario{
-    width: 100%;
+.div-formulario select{
+    text-align: center;
+    background-color: #3095a7;
+    border-radius: 5px;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
-.div-formulario button{
-    width: 20%;
-    margin-top: 4rem;
-    margin-left: 2rem;
+.div-formulario option{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   color: black;
+    background-color: aliceblue;
+    border-radius: 5px;
     
 }
 .tiempo ,.perros_gatos{
