@@ -34,15 +34,43 @@ function generar_galeria_imagenes(
                 filas[indiceFilaActual] = $("<tr></tr>"); 
                 $(selectorTablaHTML +" tbody").append(filas[indiceFilaActual]);
             }
-
+            
             var img = new Image();
             img.src = element.url;
+
+            var peso;
+            if(element.breeds[0].weight != undefined && element.breeds[0].weight.metric != undefined){
+                peso = element.breeds[0].weight.metric;
+            }else{
+                peso = "Sin data";
+            }
+
+            var estatura;
+            if(element.breeds[0].height != undefined && element.breeds[0].height.metric != undefined){
+                estatura = element.breeds[0].height.metric;
+            }else{
+                estatura = "Sin data";
+            }
+            
+            var vida;
+            if(element.breeds[0].life_span != undefined){
+                vida = element.breeds[0].life_span;
+            }else{
+                vida = "Sin data";
+            }
+
+            var nombre;
+            if(element.breeds[0].name != undefined){
+                vida = element.breeds[0].name;
+            }else{
+                vida = "Sin data";
+            }
 
             img.onload = function() {
                                                
                 registroHTML = "<td class=\"text-center\">";
                 registroHTML += "    <img id=\"imagen-"+element.id+"\" src=\""+element.url+"\" class=\"img-thumbnail\" style=\"width:200px;height:150px;\" /><br/>";                
-                registroHTML += "    <button class=\"btn btn-info\" onclick=\"javascript:btnAction('"+element.id+"');\"  >"
+                registroHTML += "    <button class=\"btn btn-info\" data-toggle='modal' data-target='#exampleModal' >"
                 registroHTML += "       <span id=\"ajax-loader-img-"+element.id+"\" class=\"spinner-border spinner-border-sm\"></span>"
                 registroHTML += "       "+textoBoton
                 registroHTML += "    </button>"
@@ -52,7 +80,7 @@ function generar_galeria_imagenes(
 
                 $(filas[Math.floor(index/numeroColumnasPorFila)]).append(registro);
                 $("#ajax-loader-img-"+element.id).hide();
-
+                
                 if (contadorImagenesCargadas == (numeroTotalImagenes -1)) {
                     $(selectorTablaHTML + " td").fadeIn(2000);   
                     console.log("Galería de imagenes completada")                 
