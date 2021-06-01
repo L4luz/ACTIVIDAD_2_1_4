@@ -1,12 +1,13 @@
 $(document).ready(function() {
 
-    var url_apiPerro = "https://api.thecatapi.com/v1";
+    var url_apiPerro = "https://api.thedogapi.com/v1";
 
     get_breeds(url_apiPerro);
 
     $('#perros').change(function() {
         if ($(this).val() !==  0) {
             get_breeds_by_name(url_apiPerro, $(this).val())
+            console.log($(this).val());
         }
     });
 
