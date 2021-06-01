@@ -14,5 +14,5 @@ $(document).ready(function() {
 });
 
 function getBtnActionURL() {
-    return "https://api.thecatapi.com/v1/images/search?limit=1";
+    return "https://api.thedogapi.com/v1/images/search?limit=1";
 };
