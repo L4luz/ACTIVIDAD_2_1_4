@@ -61,9 +61,9 @@ function generar_galeria_imagenes(
 
             var nombre;
             if(element.breeds[0].name != undefined){
-                vida = element.breeds[0].name;
+                nombre = element.breeds[0].name;
             }else{
-                vida = "Sin data";
+                nombre = "Sin data";
             }
 
             img.onload = function() {

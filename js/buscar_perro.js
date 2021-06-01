@@ -13,7 +13,7 @@ function get_breeds_by_name(url, name) {
     console.log(urrl);
     $.get(urrl, function(response){
         $.each(response, function(index, element) {
-            $("#dog_image").append("<img id=\"imagen-"+element.id+"\" src=\""+element.url+"\" class=\"img-thumbnail\" style=\"width:200px;height:150px;\" />");
+            $("#perro_image").append("<img id=\"imagen-"+element.id+"\" src=\""+element.url+"\" class=\"img-thumbnail\" style=\"width:200px;height:150px;\" />");
         });
     });
 }

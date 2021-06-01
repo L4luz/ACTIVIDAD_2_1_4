@@ -8,20 +8,21 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <link rel="stylesheet" href="css/styles.css">
-        <script src="js/galeria-imagenes.js"></script>
+        <script src="js/galeria_gatos.js"></script>
         <script src="js/seccion-gatos.js"></script>
         <script src="js/buscar_gatos.js"></script>
-    </head>
+      </head>
     <body>
-        <div class="container-fluid text-center">
+      <div class="container-fluid text-center">
 
-          <div class="row  ">
+        <div class="row  ">
             <div class="col-12 jumbotron">
-                <h1>ADOPTA UN PELUDO</h1>
+              <h1>ADOPTA UN PELUDO</h1>
             </div>
           </div>
-
+          
           <div class="row">
             <div class="col-12 navegacion">
             <nav class="nav nav-pills flex-column flex-sm-row">
@@ -36,26 +37,61 @@
       
           <div class="row">
             <div class="titulo_pag">
-            <h2>GATOS</h2>
+            <h2>Gatos</h2>
            </div>
           </div>
-          
-            <div class=" div-formulario">
+          <div class="row div-formulario">
               <select class="form-control" id="gatos">
                 <option value="0">--SELECCIONE RAZA--</option>
-                <option value="1"> CUALQUIERA</option>
-          </div>
-          <table  id="lista-gatos" class="table text-center"></table>
+                <option value="0">CUALQUIERA</option>
+                </select>
+              </div>
         
+          <br>
+          <table id="lista-gatos" class="table text-center">
+            </table>
+            
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-12 navegacion">
+                          <img id="fotoDetalle" href="#" height="300" width="300"></img>
+                      </div>
           
+                      <div class="col-12 navegacion">
+                          Peso promedio en Kg.:  <label id="lblKilo"></label>
+                      </div>
+          
+          
+                      <div class="col-12 navegacion">
+                          Nombre: <label id="lblNombre"></label>
+                      </div>
+          
+                      <div class="col-12 navegacion">
+                          Esperanza de vida: <label id="lblVida"></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
         </div>
-        </div>
-
-
-
-          <footer >
-            NICOLAS IGNACIO LALUZ BURGOS
-          </footer>
+        <footer >
+          NICOLAS IGNACIO LALUZ BURGOS
+        </footer>
 
     </body>
+    <script src="js/validar_gatos.js"></script>
 </html>

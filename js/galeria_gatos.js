@@ -37,19 +37,11 @@ function generar_galeria_imagenes(
             
             var img = new Image();
             img.src = element.url;
-
             var peso;
-            if(element.breeds[0].weight != undefined && element.breeds[0].weight.metric != undefined){
-                peso = element.breeds[0].weight.metric;
+            if(element.breeds[0].width != undefined && element.breeds[0].width != undefined){
+                peso = response.breeds[0].width;
             }else{
                 peso = "Sin data";
-            }
-
-            var estatura;
-            if(element.breeds[0].height != undefined && element.breeds[0].height.metric != undefined){
-                estatura = element.breeds[0].height.metric;
-            }else{
-                estatura = "Sin data";
             }
             
             var vida;
@@ -61,9 +53,9 @@ function generar_galeria_imagenes(
 
             var nombre;
             if(element.breeds[0].name != undefined){
-                vida = element.breeds[0].name;
+                nombre = element.breeds[0].name;
             }else{
-                vida = "Sin data";
+                nombre = "Sin data";
             }
 
             img.onload = function() {

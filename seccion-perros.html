@@ -9,19 +9,14 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-       
         <link rel="stylesheet" href="css/styles.css">
-        <script src="js/galeria-imagenes.js"></script>
         <script src="js/seccion-perros.js"></script>
         <script src="js/buscar_perro.js"></script>
-        
-        
       </head>
-      
-    <body>
-      <div class="container-fluid text-center">
+      <body>
+        <div class="container-fluid text-center">
 
-        <div class="row  ">
+          <div class="row  ">
             <div class="col-12 jumbotron">
               <h1>ADOPTA UN PELUDO</h1>
             </div>
@@ -29,32 +24,31 @@
           
           <div class="row">
             <div class="col-12 navegacion">
-            <nav class="nav nav-pills flex-column flex-sm-row">
-              <a class="flex-sm-fill text-sm-center nav-link " href="index.html">INICIO</a>
-              <a class="flex-sm-fill text-sm-center nav-link" href="quiSom.html">QUIÉNES SOMOS</a>
+              <nav class="nav nav-pills flex-column flex-sm-row">
+                <a class="flex-sm-fill text-sm-center nav-link " href="index.html">INICIO</a>
+                <a class="flex-sm-fill text-sm-center nav-link" href="quiSom.html">QUIÉNES SOMOS</a>
               <a class="flex-sm-fill text-sm-center nav-link" href="mi_vi.html">MISIÓN/VISIÓN</a>
               <a class="flex-sm-fill text-sm-center nav-link active" href ="comAdo.html">CÓMO ADOPTAR</a>
               <a class="flex-sm-fill text-sm-center nav-link" href ="contac.html">CONTÁCTENOS</a>
             </nav>
           </div>
-          </div>
-      
-          <div class="row">
-            <div class="titulo_pag">
-            <h2>PERROS</h2>
-           </div>
-          </div>
-          <div class="row div-formulario">
-              <select class="form-control" id="perros">
-                <option value="0">--SELECCIONE RAZA--</option>
-                <option value="0">CUALQUIERA</option>
-                </select>
-              </div>
+        </div>
         
-          <br>
-          <table id="lista-perros" class="table text-center">
-            </table>
-            
+        <div class="row">
+          <div class="titulo_pag">
+            <h2>PERROS</h2>
+          </div>
+        </div>
+        <div class="row div-formulario">
+          <select class="form-control" id="perros">
+            <option value="0">--SELECCIONE RAZA--</option>
+            <option value="0">CUALQUIERA</option>
+          </select>
+        </div>
+        
+        <table id="lista-perros" class="table text-center">
+        </table>
+        
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -67,38 +61,39 @@
                   <div class="modal-body">
                     <div class="row">
                       <div class="col-12 navegacion">
-                          <img id="fotoDetalle" href="#" height="300" width="300"></img>
+                        <img id="fotoDetalle" href="#" height="300" width="300"></img>
                       </div>
-          
+                      
                       <div class="col-12 navegacion">
-                          Peso promedio en Kg.: Kilos:<label id="lblKilo"></label>
+                        Peso promedio en Kg.:  <label id="lblKilo"></label>
                       </div>
-          
+                      
                       <div class="col-12 navegacion">
-                          Estatura promedio en Cms.:<label id="lblCm"></label>
+                        Estatura promedio en Cms.:   <label id="lblCm"></label>
                       </div>
-          
+                      
                       <div class="col-12 navegacion">
-                          Nombre: <label id="lblNombre"></label>
+                        Nombre: <label id="lblNombre"></label>
                       </div>
-          
+                      
                       <div class="col-12 navegacion">
                           Esperanza de vida: <label id="lblVida"></label>
+                        </div>
                       </div>
                     </div>
-                  </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                   </div>
                 </div>
               </div>
             </div>
-
-        </div>
+            
+          </div>
         <footer >
           NICOLAS IGNACIO LALUZ BURGOS
         </footer>
-
-    </body>
-    <script src="js/validar.js"></script>
-</html>
+        
+      </body>
+      <script src="js/validar.js"></script>
+      <script src="js/galeria_perros.js"></script>
+      </html>

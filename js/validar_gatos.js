@@ -1,23 +1,23 @@
-$('#perros').click(function(){
+$('#gatos').click(function(){
     fn_consultarIndicador();
 })
 function fn_consultarIndicador() {
-    $.getJSON('https://api.thedogapi.com/v1/breeds', function(data) {
+    $.getJSON('https://api.thecatapi.com/v1/breeds', function(data) {
         var respuesta = data;
-        var seleccion = $('#perros option:selected').text();
+        var seleccion = $('#gatos option:selected').text();
         if(seleccion == 'CUALQUIERA') {
-            $("#lista-perros tr").remove();
+            $("#lista-gatos tr").remove();
                 var nroTotalImagenes = 6;
                 var nroColumnasPorFila = 2;
-                var selectorTablaHTML = "#lista-perros"
-                var url = "https://api.thedogapi.com/v1/images/search?limit=1"+nroTotalImagenes
+                var selectorTablaHTML = "#lista-gatos"
+                var url = "https://api.thecatapi.com/v1/images/search?limit=1"+nroTotalImagenes
                 //var url = "https://api.thedogapi.com/v1/breeds";
                 
                 generar_galeria_imagenes(selectorTablaHTML, nroTotalImagenes, nroColumnasPorFila, url,"Ver mas");
             ;
             
             function getBtnActionURL() {
-                return "https://api.thedogapi.com/v1/images/search?q=air";
+                return "https://api.thecatapi.com/v1/images/search?q=air";
             }
             
            }
@@ -25,12 +25,12 @@ function fn_consultarIndicador() {
            
         }
         else if(seleccion == seleccion){
-            $("#lista-perros tr").remove();
+            $("#lista-gatos tr").remove();
             var nroTotalImagenes = 1;
                 var nroColumnasPorFila = 1;
-                var selectorTablaHTML = "#lista-perros"
-                var url = "https://api.thedogapi.com/v1/images/search?name="+seleccion
-
+                var selectorTablaHTML = "#lista-gatos"
+                var url = "https://api.thecatapi.com/v1/images/search?name="+seleccion
+                
                 var filter;
                 for (i = 0; i < data.length; i++) {
                     var nombre = data[i].name;
@@ -42,14 +42,13 @@ function fn_consultarIndicador() {
                 var imageUrl = filter.image.url;
                 document.getElementById("fotoDetalle").src = imageUrl;
                 $("#lblKilo").html(filter.weight.metric);
-                $("#lblCm").html(filter.height.metric);
                 $("#lblNombre").html(filter.name);
                 $("#lblVida").html(filter.life_span);
                 generar_galeria_imagenes(selectorTablaHTML, nroTotalImagenes, nroColumnasPorFila, url,"Ver mas");
             ;
 
             function getBtnActionURL() {
-                return "https://api.thedogapi.com/v1/images/search?id="+i;
+                return "https://api.thecatapi.com/v1/images/search?id="+i;
             }
             
         }
@@ -60,7 +59,7 @@ function fn_consultarIndicador() {
 
 }
 
-function mostrarPerros(){
+function mostrarGatos(){
     
     $('#myModal').modal('show');
     //$("#tabla_detalle").show();
